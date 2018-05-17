@@ -14,4 +14,8 @@ export class ContactService {
   getContact(): Observable<Contact[]> {
     return this.contactHttpService.getHttp();
   }
+
+  getContactById(id): Observable<Contact> {
+    return this.contactHttpService.getById(id);
+  }
 }

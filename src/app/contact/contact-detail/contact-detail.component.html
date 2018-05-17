@@ -1,0 +1,7 @@
+<div *ngIf="contact">
+  <h2>{{contact.firstName}} {{contact.lastName}}</h2>
+  <p>Address: {{contact.streetAddress}}, {{contact.zipCode}} {{contact.city}}</p>
+  <p>Phone: {{contact.phoneNumber}}</p>
+  <p>Email: {{contact.email}}</p>
+  <button (click)="onNavigateBack()">Back</button>
+</div>
