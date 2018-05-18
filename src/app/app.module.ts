@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {ContactDetailComponent} from './contact/contact-detail/contact-detail.component';
 import {RouterModule, Routes} from '@angular/router';
 import {MaterialComponentsModule} from './contact/ui/material-components/material-components.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 const appRoutes: Routes = [
   {path: 'contacts', component: ContactListComponent},
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    MaterialComponentsModule
+    MaterialComponentsModule,
+    FlexLayoutModule
   ],
   providers: [
     ContactService,
@@ -37,4 +39,5 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  private static FlexLayoutModule: any;
 }
