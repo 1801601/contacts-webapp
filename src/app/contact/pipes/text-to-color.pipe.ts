@@ -27,6 +27,8 @@ export class TextToColorPipe implements PipeTransform {
     'r': '#00BCD4',
     's': '#E91E63',
     't': '#3473bc',
+    'u': '#EEFF41',
+    'v': '#F57C00'
   };
 
   transform(value: any, args ?: any): any {

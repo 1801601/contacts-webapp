@@ -25,16 +25,16 @@
                placeholder="Street Address">
       </mat-form-field>
       <mat-form-field floatPlaceholder="auto">
-        <input matInput [(ngModel)]="contact.phoneNumber"
-               type="text"
-               required
-               placeholder="Phone Number">
-      </mat-form-field>
-      <mat-form-field floatPlaceholder="auto">
         <input matInput [(ngModel)]="contact.zipCode"
                type="text"
                required
                placeholder="Zip Code">
+      </mat-form-field>
+      <mat-form-field floatPlaceholder="auto">
+        <input matInput [(ngModel)]="contact.phoneNumber"
+               type="text"
+               required
+               placeholder="Phone Number">
       </mat-form-field>
       <mat-form-field floatPlaceholder="auto">
         <input matInput [(ngModel)]="contact.email"
@@ -46,3 +46,7 @@
   </div>
 
 </mat-card>
+
+<button mat-fab (click)="onSave()" class = "cw-fab">
+  <mat-icon class="mat-18">check</mat-icon>
+</button>
