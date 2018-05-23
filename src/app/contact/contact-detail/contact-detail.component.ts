@@ -49,11 +49,7 @@ export class ContactDetailComponent implements OnInit {
     }
 
     this.toolbar.toolbarOptions.next(
-      new ToolbarOptions('Contact', toolbarActions));
-  }
-
-  onNavigateBack(): void {
-    this.router.navigate(['/contacts']);
+      new ToolbarOptions(true, 'Contact', toolbarActions));
   }
 
   onSave(): void {
