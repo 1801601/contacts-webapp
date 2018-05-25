@@ -48,8 +48,7 @@ export class ContactDetailComponent implements OnInit {
       });
     }
 
-    this.toolbar.toolbarOptions.next(
-      new ToolbarOptions(true, 'Contact', toolbarActions));
+    this.toolbar.setToolbarOptions(new ToolbarOptions(true, 'Contact', toolbarActions));
   }
 
   onSave(): void {
@@ -70,7 +69,23 @@ export class ContactDetailComponent implements OnInit {
   }
 
   onEdit() {
+    let toolbarActions: ToolbarAction[];
     this.editingEnabled = !this.editingEnabled;
+    if (this.editingEnabled === true) {
+      // edit mode on
+      console.log('edit mode enabled');
+      toolbarActions = [
+        new ToolbarAction(this.onDelete.bind(this), 'delete'),
+        new ToolbarAction(this.onEdit.bind(this), 'edit')
+      ];
+    } else {
+      // edit mode off
+      console.log('edit mode disabled');
+      toolbarActions = [
+        new ToolbarAction(this.onEdit.bind(this), 'edit')
+      ];
+    }
+    this.toolbar.setToolbarOptions((new ToolbarOptions(true, 'Contact', toolbarActions)));
   }
 
   onDelete() {
